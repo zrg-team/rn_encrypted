@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ecrypted Chat</string>
+    <color name="white">#FFFFFF</color>
+    <color name="primary">#051C3F</color>
+    <color name="black">#000000</color>
+    <color name="primary_dark">#000000</color>
+</resources>

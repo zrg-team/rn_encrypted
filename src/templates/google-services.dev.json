@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "92592722132",
+    "firebase_url": "https://encrypted-21df9.firebaseio.com",
+    "project_id": "encrypted-21df9",
+    "storage_bucket": "encrypted-21df9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92592722132:android:d5c1524875e8cac15fab41",
+        "android_client_info": {
+          "package_name": "com.zrg.encrypted_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92592722132-i2hdmpc21ga67ptn0055j04srp76lb2u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBs0WWg0RR36mptGoy3CGdzkRKoIaIdy0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92592722132-i2hdmpc21ga67ptn0055j04srp76lb2u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,14 @@
+{
+  "DEBUG": false,
+  "TIMEOUT": 15000,
+  "LOG_LEVEL": "debug",
+  "LOG_TERMINAL": false,
+  "DEBUG_PAGE": false,
+  "DEFAULT_LANGUAGE": "en",
+  "PIN_LIMIT": 3,
+  "PIN_PENALTY": 2,
+  "PIN_LOCK_TIME": 60000,
+  "PIN_STORE_KEY": "@PIN_STORE_KEY",
+  "STYLE_SHEET": {
+  }
+}
