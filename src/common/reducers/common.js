@@ -1,6 +1,4 @@
 import { handleActions } from 'redux-actions'
-import i18n from 'i18n-js'
-import moment from 'moment'
 import * as actions from '../actions/common'
 
 const defaultState = {
@@ -15,6 +13,12 @@ const handlers = {
   [actions.clearAll]: (state, action) => {
     return {
       ...defaultState
+    }
+  },
+  [actions.setUserLanguage]: (state, action) => {
+    return {
+      ...state,
+      language: action.payload
     }
   },
   [actions.setNavigationPage]: (state, action) => {

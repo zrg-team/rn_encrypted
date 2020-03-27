@@ -5,6 +5,7 @@ import database from '../../libraries/Database'
 import MainPage from './MainPage'
 import firebase from '../../libraries/firebase'
 import commonHandler from '../handlers/common'
+import { defaultTheme } from '../../styles/common'
 import { Colors, Typography, Spacings } from 'react-native-ui-lib'
 
 class Root extends Component {
@@ -41,26 +42,11 @@ class Root extends Component {
     this.handleFirebase(this.props)
 
     // TODO: Do something cool with style and theme also
-    Colors.loadColors({
-      primaryColor: '#2364AA',
-      secondaryColor: '#81C3D7',
-      textColor: '##221D23',
-      errorColor: '#E63B2E',
-      successColor: '#ADC76F',
-      warnColor: '##FF963C'
-    })
+    Colors.loadColors(defaultTheme.colors)
 
-    Typography.loadTypographies({
-      heading: { fontSize: 36, fontWeight: '600' },
-      subheading: { fontSize: 28, fontWeight: '500' },
-      body: { fontSize: 18, fontWeight: '400' }
-    })
+    Typography.loadTypographies(defaultTheme.typography)
 
-    Spacings.loadSpacings({
-      page: 20,
-      card: 12,
-      gridGutter: 16
-    })
+    Spacings.loadSpacings(defaultTheme.spacings)
 
     try {
       await database.init()

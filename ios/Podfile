@@ -34,20 +34,16 @@ target 'encrypted_chat' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+  pod 'Firebase/Messaging', '~> 6.13.0'
+  pod 'FirebaseInAppMessaging', '0.16.0'
+  pod 'Firebase/InAppMessagingDisplay'
+  pod 'Firebase/Analytics'
+
   target 'encrypted_chatTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
   use_native_modules!
-end
-
-target 'encrypted_chat-tvOS' do
-  # Pods for encrypted_chat-tvOS
-
-  target 'encrypted_chat-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end

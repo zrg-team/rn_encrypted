@@ -25,9 +25,13 @@ export default class FadeLoading extends PureComponent {
 
   componentDidMount () {
     const { init, navigation, mainPage, time } = this.props
-    init && setImmediate(() => {
+    this.timeout = init && setTimeout(() => {
       navigationReplace(navigation, mainPage)
     }, time || 0)
+  }
+
+  componentWillUnmount () {
+    clearTimeout(this.timeout)
   }
 
   render () {

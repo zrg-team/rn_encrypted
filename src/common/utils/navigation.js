@@ -20,29 +20,19 @@ export function navigationReset (navigation = navigator, page, params = {}, key 
 }
 
 export function navigationReplace (navigation = navigator, page, params = {}, key = new Date().getTime()) {
-  const resetAction = StackActions.replace({
-    params,
-    routeName: page,
-    newKey: key || page
+  navigation.dispatch({
+    ...StackActions.replace(page, params)
   })
-  navigation.dispatch(resetAction)
 }
 
 export function navigationPush (navigation = navigator, page, params = {}, key) {
-  const navigateAction = StackActions.navigate({
-    routeName: page,
-    params,
-    key,
-    action: StackActions.navigate({ routeName: page })
-  })
+  const navigateAction = StackActions.push(page, params)
 
   navigation.dispatch(navigateAction)
 }
 
 export function navigationPop (navigation = navigator, number = 1) {
-  const popAction = StackActions.pop({
-    n: number
-  })
+  const popAction = StackActions.pop(number)
   navigation.dispatch(popAction)
 }
 

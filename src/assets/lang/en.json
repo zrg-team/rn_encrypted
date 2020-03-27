@@ -1,7 +1,19 @@
 {
   "common": {
+    "next": "Next"
   },
-  "debug": {
-    
+  "debug": { 
+  },
+  "login_page": {
+    "login_form_title": "Hello!",
+    "login_form_subtitle": "Login to your account",
+    "email": "User Email",
+    "input_passphrase": "Please enter your 12-word passphrase",
+    "enter_your_passphrase": "Enter your passphrase"
+  },
+  "errors": {
+    "email_required": "Please input your email.",
+    "invalid_email_format": "Please input valid email address.",
+    "passphrase_required": "Please input your passphrase."
   }
 }

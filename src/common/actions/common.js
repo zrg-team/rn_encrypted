@@ -9,6 +9,7 @@ export const setNavigationPage = createAction('SET_NAVIGATION_PAGE')
 export const setNetworkStatus = createAction('SET_NETWORK_STATUS')
 export const setDeviceToken = createAction('SET_DEVICE_TOKEN')
 export const setNotificationTopics = createAction('SET_NOTIFICATION_TOPICS')
+export const setUserLanguage = createAction('SET_USER_LANGUAGE')
 
 export const fetchStart = createAction('API_FETCH_START')
 export const fetchSuccess = createAction('API_FETCH_SUCCESS')

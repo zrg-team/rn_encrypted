@@ -24,7 +24,9 @@ childProcess.execSync('rm -rf src/configs/index.json')
 childProcess.execSync(`cp ./src/templates/index.${ENV}.json ./src/configs/index.json`)
 // BUILD FIREBASE
 childProcess.execSync('rm -rf android/app/google-services.json')
+childProcess.execSync('rm -rf android/app/GoogleService-Info.plist')
 childProcess.execSync(`cp ./src/templates/google-services.${FIREBASE}.json ./android/app/google-services.json`)
+childProcess.execSync(`cp ./src/templates/GoogleService-Info.${FIREBASE}.plist ./ios/GoogleService-Info.plist`)
 // BUILD DEBUG PAGE
 childProcess.execSync('rm -rf src/pages/DebugPage.js')
 childProcess.execSync(`cp scripts/pages/DebugPage.${DEBUG_PAGE}.js src/pages/DebugPage.js`)

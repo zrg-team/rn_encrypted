@@ -258,25 +258,16 @@ ${buildFile.gradle}
           style={[
             styles.log_data,
             {
-              paddingHorizontal: 10,
-              paddingVertical: 12,
-              textAlign: 'left',
-              fontSize: 10
+              paddingHorizontal: 5,
+              paddingVertical: 5,
+              textAlign: 'center',
+              fontSize: 12
             }
           ]}
-          numberOfLines={8}
+          numberOfLines={2}
           ellipsizeMode='clip'
         >
-          {`
-
-██████╗█████████╗   ██╗
-██╔══████╔════██║   ██║
-██║  ███████╗ ██║   ██║
-██║  ████╔══╝ ╚██╗ ██╔╝
-██████╔███████╗╚████╔╝
-╚═════╝╚══════╝ ╚═══╝
-
-          `}
+          🌁🌃🌄🌅🌆🌇🌉🌌🎑🎆🎇🏞️🏙️🌠🌁🌃🌄🌅🌆🌇🌉🌌🎑🎆🎇🏞️🏙️🌠
         </Text>
       )
     }
@@ -345,14 +336,13 @@ ${buildFile.gradle}
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
         >
-          <Text style={{ textAlign: 'center', fontSize: 13, color: 'green' }}>
+          <Text style={{ textAlign: 'center', fontSize: 16, color: 'green' }}>
             {
               `
 ZRG-TEAM
 
 🇻🇳 👨‍💻 🇻🇳
-
-🌁🌃🌄🌅🌆🌇🌉🌌🎑🎆🎇🏞️🏙️🌠🌁🌃🌄🌅🌆🌇🌉🌌🎑🎆🎇🏞️🏙️🌠
+🅵🅾🆁 🅳🅴🆅🅴🅻🅾🅿🅴🆁
               `
             }
           </Text>
@@ -440,6 +430,7 @@ const styles = StyleSheet.create({
   title: {
   },
   detail: {
+    marginRight: 12
   },
   store_title: {
     width: '100%',

@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
 import { SCREENS } from '../common/routes'
 import FadeLoading from '../common/components/Widgets/FadeLoading'
 import DefaultPage from '../common/hocs/DefaultPage'
@@ -7,9 +6,11 @@ import DefaultPage from '../common/hocs/DefaultPage'
 class LoadingPage extends PureComponent {
   constructor (props) {
     super(props)
+    const { route = {} } = props
+    const params = route.params || {}
     this.state = {
       ready: false,
-      screen: props.page || SCREENS.Debug
+      screen: params.page || SCREENS.Debug
     }
   }
 
@@ -29,12 +30,4 @@ class LoadingPage extends PureComponent {
   }
 }
 
-const mapDispatchToProps = (dispatch, props) => ({
-  dispatch
-})
-
-const mapStateToProps = state => ({
-  rehydrated: state._persist.rehydrated
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(LoadingPage)
+export default LoadingPage

@@ -84,8 +84,12 @@ export default class MainPage extends Component {
   onAppStateChange (currentAppState) {
     const { dispatch } = this.props
     // Should dispatch to redux network status
-    console.info('[MAINPAGE] App change state', currentAppState)
-    dispatch(setApplicationState(currentAppState))
+    console.log('currentAppState !== this.lastAppState', currentAppState !== this.lastAppState)
+    if (currentAppState !== this.lastAppState) {
+      this.lastAppState = currentAppState
+      console.info('[MAINPAGE] App change state', currentAppState)
+      dispatch(setApplicationState(currentAppState))
+    }
   }
 
   getNavigator (loginKey, language) {
@@ -194,6 +198,7 @@ export default class MainPage extends Component {
         key='main'
         style={[
           {
+            zIndex: 999999,
             opacity: loading ? 0 : 1,
             height: '100%',
             paddingTop: StatusBar.currentHeight
