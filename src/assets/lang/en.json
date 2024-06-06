@@ -15,5 +15,25 @@
     "email_required": "Please input your email.",
     "invalid_email_format": "Please input valid email address.",
     "passphrase_required": "Please input your passphrase."
+  },
+  "button": {
+    "default": "Click me"
+  },
+  "avatar": {
+    "alt_text": "User Avatar"
+  },
+  "card": {
+    "default_content": "Card Content"
+  },
+  "header": {
+    "back_button": "Back",
+    "close_button": "Close"
+  },
+  "footer": {
+    "default_text": "Footer Content"
+  },
+  "list_item": {
+    "default_title": "Item Title",
+    "default_subtitle": "Item Subtitle"
   }
 }
