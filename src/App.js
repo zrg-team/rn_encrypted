@@ -1,29 +1,29 @@
-import 'react-native-gesture-handler'
-import React, { Component } from 'react'
-import { Provider } from 'react-redux'
-import { enableScreens } from 'react-native-screens'
-import { PersistGate } from 'redux-persist/es/integration/react'
-import store from './common/store'
-import Root from './common/hocs/Root'
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import MainPage from './pages/MainPage'; // Imported MainPage as per the patch
+import { createStackNavigator } from '@react-navigation/stack';
 
-// Disable message in the bottom
-console.disableYellowBox = true
-enableScreens()
-// Pure class no need Component
-class App extends Component {
-  shouldComponentUpdate () {
-    return false
-  }
+const Stack = createStackNavigator();
 
-  render () {
-    return (
-      <Provider store={store.store}>
-        <PersistGate loading={null} persistor={store.persistor}>
-          <Root />
-        </PersistGate>
-      </Provider>
-    )
-  }
-}
+// Assuming HomeScreen is defined somewhere else in the project
+// import HomeScreen from './path_to_HomeScreen';
 
-export default App
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+        />
+        <Stack.Screen
+          name="MainPage"
+          component={MainPage}
+        />
+        {/* other routes */}
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default App;

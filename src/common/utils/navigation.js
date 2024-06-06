@@ -1,5 +1,7 @@
 import { StackActions } from '@react-navigation/native'
-import { SCREENS } from '../routes'
+import { SCREENS } from '../routes';
+
+SCREENS['MainPage'] = 'MainPage';
 
 let navigator
 export function setTopLevelNavigator (navigatorRef) {
