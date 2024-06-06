@@ -15,5 +15,18 @@
     "email_required": "Please input your email.",
     "invalid_email_format": "Please input valid email address.",
     "passphrase_required": "Please input your passphrase."
+  },
+  "components": {
+    "button": {
+      "cancel": "Cancel",
+      "confirm": "Confirm"
+    },
+    "header": {
+      "details": "Details"
+    },
+    "alert_modal": {
+      "title": "Alert",
+      "message": "This is an alert message."
+    }
   }
 }
